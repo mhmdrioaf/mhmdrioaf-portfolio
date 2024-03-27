@@ -4,8 +4,10 @@ import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
 
 export async function getContent(contentId: string) {
+  const contentPath = path.join(process.cwd(), `content/${contentId}.mdx`);
+
   try {
-    const file = await fs.readFile(`src/content/${contentId}.mdx`, "utf-8");
+    const file = await fs.readFile(contentPath, "utf-8");
     const source = await serialize(file, { parseFrontmatter: true });
     return source as TContentSource;
   } catch (err) {
@@ -16,16 +18,20 @@ export async function getContent(contentId: string) {
 
 export async function listContents() {
   try {
-    const contentFilePaths = (await fs.readdir("src/content")).filter(
-      (contentPath) => {
-        return path.extname(contentPath).toLowerCase() === ".mdx";
-      }
-    );
+    const contentFilePaths = (
+      await fs.readdir(path.join(process.cwd(), "content"))
+    ).filter((contentPath) => {
+      return path.extname(contentPath).toLowerCase() === ".mdx";
+    });
 
     const contents: TFrontmatter[] = [];
 
     for (const contentFilePath of contentFilePaths) {
-      const file = await fs.readFile(`src/content/${contentFilePath}`, "utf-8");
+      const contentDetailPath = path.join(
+        process.cwd(),
+        `content/${contentFilePath}`
+      );
+      const file = await fs.readFile(contentDetailPath, "utf-8");
       const source = await serialize(file, { parseFrontmatter: true });
       contents.push(source.frontmatter as TFrontmatter);
     }
