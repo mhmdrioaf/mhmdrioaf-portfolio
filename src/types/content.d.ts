@@ -1,0 +1,15 @@
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
+
+type TContentSource = Pick<
+  MDXRemoteSerializeResult,
+  "compiledSource" | "scope"
+> & {
+  frontmatter: TFrontmatter;
+};
+
+type TFrontmatter = {
+  title: string;
+  description: string;
+  previewImage: string;
+  slug: string;
+};
