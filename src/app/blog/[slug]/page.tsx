@@ -19,6 +19,33 @@ export async function generateMetadata({
   return {
     title: contentSource.frontmatter.title as string,
     description: contentSource.frontmatter.description as string,
+    authors: [
+      {
+        name: "Muhammad Rio Ananta Firdaus",
+        url: "https://github.com/mhmdrioaf",
+      },
+      {
+        name: "Rio Ananta",
+        url: "https://linkedin.com/in/rioananta",
+      },
+    ],
+    keywords: [
+      "Next.js",
+      "TypeScript",
+      "MDX",
+      "Blog",
+      "Javascript",
+      "Rio",
+      "Rio Ananta",
+      "Muhammad Rio Ananta Firdaus",
+      "Portfolio",
+      "Frontend",
+      "Backend",
+      "Fullstack",
+      "Developer",
+      contentSource.frontmatter.title as string,
+    ],
+    creator: "Muhammad Rio Ananta Firdaus",
   };
 }
 

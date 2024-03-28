@@ -10,6 +10,5 @@ type TContentSource = Pick<
 type TFrontmatter = {
   title: string;
   description: string;
-  previewImage: string;
   slug: string;
 };

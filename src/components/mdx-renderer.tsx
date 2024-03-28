@@ -1,6 +1,11 @@
 "use client";
 
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import Image from "next/image";
+
+const mdxComponents = {
+  Image,
+};
 
 export default function MDXRenderer({ ...props }: MDXRemoteSerializeResult) {
   return (
@@ -12,7 +17,7 @@ export default function MDXRenderer({ ...props }: MDXRemoteSerializeResult) {
         </p>
       </div>
       <div className="prose-base prose-headings:font-medium prose-a:text-on-primary prose-p:text-left prose-a:underline prose-headings:text-on-primary prose-p:text-on-primary prose-hr:border-on-primary">
-        <MDXRemote {...props} />
+        <MDXRemote {...props} components={mdxComponents} />
       </div>
     </div>
   );
