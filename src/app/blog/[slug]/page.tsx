@@ -31,5 +31,9 @@ export default async function BlogPage({
 
   if (!contentSource) return notFound();
 
-  return <MDXRenderer {...contentSource} />;
+  return (
+    <div className="w-full grid place-items-center">
+      <MDXRenderer {...contentSource} />
+    </div>
+  );
 }
