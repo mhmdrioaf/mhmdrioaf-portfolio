@@ -14,4 +14,5 @@ type TFrontmatter = {
   link?: string;
   createdAt: string;
   updatedAt: string;
+  tags: string;
 };
