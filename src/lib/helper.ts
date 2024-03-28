@@ -37,8 +37,8 @@ export async function listContents() {
     }
 
     return contents.sort((a, b) => {
-      const dateA = new Date(a.createdAt).getTime();
-      const dateB = new Date(b.createdAt).getTime();
+      const dateA = new Date(a.updatedAt).getTime();
+      const dateB = new Date(b.updatedAt).getTime();
       return dateB - dateA;
     });
   } catch (err) {
