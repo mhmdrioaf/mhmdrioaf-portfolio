@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Rio's Portfolio",
     title: "Rio | Web Developer",
     url: "https://mhmdrioaf.vercel.app",
-    images: ["/rio.jpg"],
+    images: ["https://mhmdrioaf.vercel.app/rio.jpg"],
   },
 };
 
