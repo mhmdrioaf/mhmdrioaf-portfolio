@@ -36,7 +36,11 @@ export async function listContents() {
       contents.push(source.frontmatter as TFrontmatter);
     }
 
-    return contents;
+    return contents.sort((a, b) => {
+      const dateA = new Date(a.createdAt).getTime();
+      const dateB = new Date(b.createdAt).getTime();
+      return dateB - dateA;
+    });
   } catch (err) {
     console.error("An error occurred while listing the contents: ", err);
     return [];

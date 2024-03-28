@@ -12,4 +12,5 @@ type TFrontmatter = {
   description: string;
   slug: string;
   link?: string;
+  createdAt: string;
 };
