@@ -23,7 +23,7 @@ export default function MDXRenderer({ ...props }: TContentSource) {
             {props.frontmatter.title as string}
           </p>
         </div>
-        <div className="prose-base prose-headings:font-medium prose-a:text-on-primary prose-p:text-left prose-a:underline prose-headings:text-on-primary prose-p:text-on-primary prose-hr:border-on-primary">
+        <div className="prose-base prose-headings:font-medium prose-a:text-on-primary prose-p:text-left prose-a:underline prose-headings:text-on-primary prose-p:text-on-primary prose-hr:border-on-primary prose-ul:list-disc">
           <MDXRemote {...props} components={mdxComponents} />
         </div>
 
