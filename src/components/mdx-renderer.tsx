@@ -12,18 +12,18 @@ const mdxComponents = {
 
 export default function MDXRenderer({ ...props }: TContentSource) {
   return (
-    <div className="w-4/5 relative flex flex-col gap-2 items-center justify-center">
-      <div className="w-full flex flex-col gap-8 markdown px-32 py-16">
+    <div className="w-full md:w-4/5 relative flex flex-col gap-2 items-center justify-center">
+      <div className="w-full flex flex-col gap-8 markdown px-16 py-8 md:px-32 md:py-16">
         <Link className="text-on-primary underline text-sm" href="/">
           <span>⬅ Back</span>
         </Link>
-        <div className="w-full h-screen fixed top-0 left-0 noise bg-blend-screen pointer-events-none z-[60] opacity-75" />
+        <div className="w-full h-[125vh] fixed top-0 left-0 noise bg-blend-screen pointer-events-none z-[60] opacity-75" />
         <div className="w-full flex flex-col gap-2">
-          <p className="text-4xl font-bold">
+          <p className="text-2xl md:text-4xl hyphens-auto md:hyphens-none text-left font-bold">
             {props.frontmatter.title as string}
           </p>
         </div>
-        <div className="prose-base prose-headings:font-medium prose-a:text-on-primary prose-p:text-left prose-a:underline prose-headings:text-on-primary prose-p:text-on-primary prose-hr:border-on-primary prose-ul:list-disc">
+        <div className="prose-sm md:prose-base prose-headings:font-medium prose-a:text-on-primary prose-p:text-left prose-a:underline prose-headings:text-on-primary prose-p:text-on-primary prose-hr:border-on-primary prose-ul:list-disc">
           <MDXRemote {...props} components={mdxComponents} />
         </div>
 

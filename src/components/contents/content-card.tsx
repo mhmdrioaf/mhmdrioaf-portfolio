@@ -20,17 +20,19 @@ export default function ContentCard({ content }: IContentCardProps) {
       href={content.slug}
       className="w-full flex flex-col gap-2 overflow-hidden rounded-md bg-primary/45 hover:bg-primary/100 transition-colors p-4 mx-auto"
     >
-      <div className="w-full inline-flex justify-between items-center">
-        <h3 className="text-2xl font-bold">{content.title}</h3>
-        <p className="text-sm">{date}</p>
+      <div className="w-full flex flex-col gap-2 justify-normal lg:flex-row lg:justify-between">
+        <h3 className="text-lg md:text-2xl font-bold line-clamp-2">
+          {content.title}
+        </h3>
+        <p className="text-xs md:text-sm">{date}</p>
       </div>
-      <p className="truncate text-sm">{content.description}</p>
-      <div className="w-full inline-flex gap-2 items-center">
+      <p className="truncate text-xs md:text-sm">{content.description}</p>
+      <div className="w-full inline-flex gap-2 items-center flex-wrap">
         {_tags.length > 0 &&
           _tags.map((tag) => (
             <span
               key={tag}
-              className="bg-on-primary/20 text-on-primary rounded-md p-2"
+              className="bg-on-primary/20 text-on-primary text-xs md:text-base rounded-md p-2"
             >
               {tag}
             </span>

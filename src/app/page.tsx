@@ -8,13 +8,13 @@ export default async function Home() {
   const contents = await listContents();
 
   return (
-    <main className="w-full flex flex-col gap-8 px-32 py-16 bg-background text-on-primary background min-h-screen">
-      <div className="w-full h-screen fixed top-0 left-0 noise bg-blend-screen pointer-events-none z-[60] opacity-50" />
+    <main className="w-full flex flex-col gap-8 px-16 py-8 md:px-32 md:py-16 bg-background text-on-primary background min-h-screen">
+      <div className="w-full h-[125vh] fixed top-0 left-0 noise bg-blend-screen pointer-events-none z-[60] opacity-50" />
       <Header />
       <div className="w-full flex flex-col gap-4">
         <SelfProfile />
 
-        <div className="w-full">
+        <div className="w-full hidden md:block">
           <p className="font-medium text-justify italic">
             {
               "Seasoned web developer with over four years of dedicated experience in non-commercial projects, I specialize in web development, embracing the latest technologies with enthusiasm. My expertise lies in the React.js and/or Next.js frameworks, where I've honed my skills and fostered a deep passion for crafting dynamic and efficient web solutions. My adaptability to emerging technologies underscores my commitment to staying at the forefront of the ever-evolving web development landscape."
