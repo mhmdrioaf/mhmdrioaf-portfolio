@@ -6,20 +6,23 @@ import { twMerge } from "tailwind-merge";
 const arvo = Arvo({ weight: ["400", "700"] });
 
 export const metadata: Metadata = {
-  title: "Rio | Web Developer",
-  description: "Muhammad Rio Ananta Firdaus portfolio website",
+  title: "Muhammad Rio Ananta Firdaus | Web Developer",
+  description:
+    "This website is Muhammad Rio Ananta Firdaus portfolio. It contains information about Muhammad Rio Ananta Firdaus, his projects, and his contact information.",
   creator: "Muhammad Rio Ananta Firdaus",
-  keywords: "web developer, portfolio, rioananta, rio, ananta, firdaus",
+  keywords:
+    "web developer, portfolio, rioananta, rio, ananta, firdaus, muhammad rio ananta firdaus, rio ananta, rio ananta firdaus, mhmdrioaf",
   generator: "Next.js",
-  applicationName: "Rio's Portfolio",
+  applicationName: "Muhammad Rio Ananta Firdaus Portfolio",
   openGraph: {
     type: "website",
     countryName: "Indonesia",
-    description: "Muhammad Rio Ananta Firdaus portfolio website",
+    description:
+      "This website is Muhammad Rio Ananta Firdaus portfolio. It contains information about Muhammad Rio Ananta Firdaus, his projects, and his contact information.",
     emails: "dev.rioananta@gmail.com",
-    locale: "en_US",
-    siteName: "Rio's Portfolio",
-    title: "Rio | Web Developer",
+    locale: "en_US.utf-8",
+    siteName: "Muhammad Rio Ananta Firdaus Portfolio",
+    title: "Muhammad Rio Ananta Firdaus | Web Developer",
     url: "https://mhmdrioaf.vercel.app",
     images: ["https://mhmdrioaf.vercel.app/rio.jpg"],
   },
