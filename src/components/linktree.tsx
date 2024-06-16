@@ -28,8 +28,7 @@ const LINKS: { name: string; url: string }[] = [
 
 export default function LinkTree() {
   return (
-    <div className="container mx-auto my-auto w-full p-16 md:p-0 md:w-1/3 flex flex-col gap-8">
-      <div className="w-full h-screen fixed top-0 left-0 noise bg-blend-screen pointer-events-none z-[60] opacity-45" />
+    <div className="w-full p-16 md:p-8 md:w-1/2 flex flex-col gap-8">
       <div className="w-full flex flex-col gap-4 items-center justify-center">
         <Image
           src="/rio.jpg"
@@ -51,14 +50,14 @@ export default function LinkTree() {
             key={link.name}
             href={link.url}
             target="_blank"
-            className="w-full rounded-md bg-primary/45 font-medium hover:bg-primary/100 p-4"
+            className="w-full rounded-md bg-surface/45 text-primary font-medium hover:bg-surface/100 p-4"
           >
             {link.name}
           </a>
         ))}
       </div>
 
-      <div className="w-full inline-flex justify-between items-center gap-2 text-on-primary/65 text-xs md:text-sm">
+      <div className="w-full inline-flex justify-between items-center gap-2 text-primary/65 text-xs md:text-sm">
         <p>
           Built with{" "}
           <span>
