@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Arvo } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const arvo = Arvo({ weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   title: "Rio | Web Developer",
@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={arvo.className}>{children}</body>
     </html>
   );
 }
