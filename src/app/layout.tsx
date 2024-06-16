@@ -3,7 +3,7 @@ import { Arvo } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 
-const arvo = Arvo({ weight: ["400", "700"] });
+const arvo = Arvo({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Muhammad Rio Ananta Firdaus | Web Developer",

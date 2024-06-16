@@ -6,7 +6,7 @@ interface IAboutCardProps {
   children: React.ReactNode;
 }
 
-const angkor = Angkor({ weight: ["400"] });
+const angkor = Angkor({ weight: ["400"], subsets: ["latin"] });
 
 export default function AboutCard({ title, children }: IAboutCardProps) {
   return (

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import { twMerge } from "tailwind-merge";
 
-const angkor = Angkor({ weight: ["400"] });
+const angkor = Angkor({ weight: ["400"], subsets: ["latin"] });
 
 export default function Welcome() {
   return (
