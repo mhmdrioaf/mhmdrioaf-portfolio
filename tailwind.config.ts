@@ -13,6 +13,7 @@ const config: Config = {
         primary: "hsl(var(--primary) / <alpha-value>)",
         "on-primary": "hsl(var(--on-primary) / <alpha-value>)",
         background: "hsl(var(--background) / <alpha-value>)",
+        foreground: "hsl(var(--foreground) / <alpha-value>)",
         surface: "hsl(var(--surface) / <alpha-value>)",
         "on-surface": "hsl(var(--on-surface) / <alpha-value>)",
       },

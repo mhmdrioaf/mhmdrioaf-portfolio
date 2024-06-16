@@ -4,10 +4,11 @@
 
 :root {
   --primary: 101 56 76;
-  --on-primary: 0 0 100;
+  --on-primary: 0 0 12;
   --surface: 112 11 23;
-  --on-surface: 0 0 100;
+  --on-surface: 101 56 76;
   --background: 0 0 12;
+  --foreground: 0 0 100;
   --padding-container-base: 1rem;
   --padding-container-md: 2rem;
 }
