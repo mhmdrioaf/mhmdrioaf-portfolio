@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --primary: 32 54 41;
-  --on-primary: 216 255 214;
-  --background: 29 32 30;
+  --primary: 101 56 76;
+  --on-primary: 0 0 100;
+  --surface: 112 11 23;
+  --on-surface: 0 0 100;
+  --background: 0 0 12;
+  --padding-container-base: 1rem;
+  --padding-container-md: 2rem;
 }
 
 @layer base {
