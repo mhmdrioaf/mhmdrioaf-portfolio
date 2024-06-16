@@ -10,7 +10,7 @@ export default function Welcome() {
   return (
     <section
       id="welcome"
-      className="w-full h-svh p-container-base md:p-container-md flex flex-col justify-center items-center bg-background text-on-primary"
+      className="w-full h-svh p-container-base md:p-container-md flex flex-col justify-center items-center bg-background text-foreground"
     >
       <div className="flex flex-col gap-4 items-center justify-center">
         <p className="text-base md:text-2xl">Welcome,</p>
