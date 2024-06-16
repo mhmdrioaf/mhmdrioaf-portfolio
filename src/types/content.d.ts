@@ -15,4 +15,6 @@ type TFrontmatter = {
   createdAt: string;
   updatedAt: string;
   tags: string;
+  shortTitle: string;
+  thumbnail: string;
 };

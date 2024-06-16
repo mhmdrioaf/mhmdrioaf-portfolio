@@ -37,12 +37,17 @@ export async function listContents() {
     }
 
     return contents.sort((a, b) => {
-      const dateA = new Date(a.updatedAt).getTime();
-      const dateB = new Date(b.updatedAt).getTime();
+      const dateA = new Date(a.createdAt).getTime();
+      const dateB = new Date(b.createdAt).getTime();
       return dateB - dateA;
     });
   } catch (err) {
     console.error("An error occurred while listing the contents: ", err);
     return [];
   }
+}
+
+export function extractIdFromSlug(slug: string) {
+  const slugParts = slug.split("/");
+  return slugParts.slice(-1)[0];
 }
