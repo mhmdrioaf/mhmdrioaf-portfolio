@@ -27,6 +27,7 @@ export default function MDXRenderer({ ...props }: TContentSource) {
               day: "numeric",
             })}
           </p>
+          <b>Keywords: {props.frontmatter.tags}</b>
         </div>
         <div className="prose-sm md:prose-base prose-headings:font-medium prose-a:text-foreground prose-p:text-left prose-a:underline prose-headings:text-foreground prose-p:text-foreground prose-hr:border-foreground prose-ul:list-disc">
           <MDXRemote {...props} components={mdxComponents} />
