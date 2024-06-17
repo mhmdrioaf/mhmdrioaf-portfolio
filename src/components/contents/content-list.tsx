@@ -27,7 +27,7 @@ export default function ContentList({ contents }: IContentListProps) {
   return (
     <section
       id="projects"
-      className="w-full grid grid-cols-1 md:grid-cols-4 gap-4 bg-background text-foreground p-container-base md:p-container-md"
+      className="w-full grid grid-cols-1 md:grid-cols-4 gap-4 bg-background text-foreground p-container-base md:p-container-md pb-14 md:pb-0"
     >
       <div className="order-2 md:order-1 flex flex-col gap-2 col-span-1">
         {contents.map((content) => (

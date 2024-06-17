@@ -14,6 +14,9 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: rgb(var(--background));
     color: rgb(var(--foreground));
