@@ -12,7 +12,7 @@ const mdxComponents = {
 export default function MDXRenderer({ ...props }: TContentSource) {
   return (
     <div className="w-full md:w-4/5 relative flex flex-col gap-2 items-center justify-center">
-      <div className="w-full flex flex-col gap-8 markdown px-16 py-8 md:px-32 md:py-16">
+      <div className="w-full flex flex-col gap-8 markdown p-container-base md:px-32 md:py-16">
         <Link className="text-primary underline text-sm" href="/">
           <span>⬅ Back</span>
         </Link>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Arvo } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
+import Header from "@/components/header";
 
 const arvo = Arvo({ weight: ["400", "700"], subsets: ["latin"] });
 
@@ -36,6 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={twMerge(arvo.className, "relative")}>
+        <Header />
         <div className="noise" />
         {children}
       </body>

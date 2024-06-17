@@ -27,9 +27,9 @@ export default function ContentList({ contents }: IContentListProps) {
   return (
     <section
       id="projects"
-      className="w-full grid grid-cols-4 gap-4 bg-background text-foreground p-container-base md:p-container-md"
+      className="w-full grid grid-cols-1 md:grid-cols-4 gap-4 bg-background text-foreground p-container-base md:p-container-md pb-14 md:pb-0"
     >
-      <div className="flex flex-col gap-2 col-span-1">
+      <div className="order-2 md:order-1 flex flex-col gap-2 col-span-1">
         {contents.map((content) => (
           <button
             onClick={() => onSelectedChange(content.slug)}
@@ -59,7 +59,7 @@ export default function ContentList({ contents }: IContentListProps) {
           }}
           transition={{ duration: 0.3 }}
           key={selectedContent.slug}
-          className="w-full h-full aspect-video relative rounded-lg overflow-hidden col-span-3"
+          className="order-1 md:order-2 w-full h-full aspect-video relative rounded-lg overflow-hidden col-span-1 md:col-span-3"
           href={selectedContent.slug}
         >
           <Image

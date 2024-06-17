@@ -10,12 +10,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "hsl(var(--primary) / <alpha-value>)",
-        "on-primary": "hsl(var(--on-primary) / <alpha-value>)",
-        background: "hsl(var(--background) / <alpha-value>)",
-        foreground: "hsl(var(--foreground) / <alpha-value>)",
-        surface: "hsl(var(--surface) / <alpha-value>)",
-        "on-surface": "hsl(var(--on-surface) / <alpha-value>)",
+        primary: "rgb(var(--primary) / <alpha-value>)",
+        "on-primary": "rgb(var(--on-primary) / <alpha-value>)",
+        background: "rgb(var(--background) / <alpha-value>)",
+        foreground: "rgb(var(--foreground) / <alpha-value>)",
+        surface: "rgb(var(--surface) / <alpha-value>)",
+        "on-surface": "rgb(var(--on-surface) / <alpha-value>)",
       },
       padding: {
         "container-base": "var(--padding-container-base)",

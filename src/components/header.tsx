@@ -1,39 +1,88 @@
 "use client";
 
+import { Angkor } from "next/font/google";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import React from "react";
+import { IoDocuments, IoHome, IoPerson } from "react-icons/io5";
+import { twMerge } from "tailwind-merge";
 
 export default function Header() {
-  const [isScrolling, setIsScrolling] = useState(false);
+  const [activeNav, setActiveNav] = React.useState<string>("welcome");
+  const scrollIntoView = (id: string) => {
+    const element = document.getElementById(id);
+    setActiveNav(id);
+    if (!element) return;
 
-  const headerStyle = `w-[calc(100%-6rem)] inline-flex left-0 rounded-md px-8 py-8 sticky text-on-primary justify-between transition-all duration-300 z-50 ${
-    isScrolling
-      ? "bg-primary/85 backdrop-blur-sm opacity-100 top-4"
-      : "opacity-0 -top-8"
-  }`;
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setIsScrolling(window.scrollY > 250);
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "start",
     });
+  };
 
-    return () => {
-      window.removeEventListener("scroll", () => {
-        setIsScrolling(window.scrollY > 250);
-      });
-    };
-  }, []);
+  const pathname = usePathname();
 
   return (
-    <header className={headerStyle}>
-      <h3 className="font-bold">Rio</h3>
+    <header className="fixed right-1/2 bottom-0 md:bottom-1/2 md:right-0 transform translate-y-0 translate-x-1/2 md:translate-x-0 md:translate-y-1/2 z-50 py-container-base md:py-0 px-container-base">
+      <nav className="flex flex-row md:flex-col gap-2">
+        {pathname === "/" && (
+          <>
+            <button
+              className={twMerge(
+                "rounded-full p-2 grid place-items-center bg-surface text-on-surface hover:bg-on-surface hover:text-surface",
+                activeNav === "welcome" && "bg-on-surface text-surface"
+              )}
+              onClick={() => scrollIntoView("welcome")}
+            >
+              <IoHome className="w-4 h-4" />
+            </button>
+            <button
+              className={twMerge(
+                "rounded-full p-2 grid place-items-center bg-surface text-on-surface hover:bg-on-surface hover:text-surface",
+                activeNav === "about" && "bg-on-surface text-surface"
+              )}
+              onClick={() => scrollIntoView("about")}
+            >
+              <IoPerson className="w-4 h-4" />
+            </button>
+            <button
+              className={twMerge(
+                "rounded-full p-2 grid place-items-center bg-surface text-on-surface hover:bg-on-surface hover:text-surface",
+                activeNav === "projects" && "bg-on-surface text-surface"
+              )}
+              onClick={() => scrollIntoView("projects")}
+            >
+              <IoDocuments className="w-4 h-4" />
+            </button>
+          </>
+        )}
 
-      <nav className="inline-flex items-center gap-2">
-        <Link href="/blog">Projects</Link>
-        <Link href="/links">Links</Link>
-        <Link className="block md:hidden" href="/about">
-          About
-        </Link>
+        {pathname !== "/" && (
+          <>
+            <Link
+              href="/"
+              className="rounded-full p-2 grid place-items-center bg-surface text-on-surface hover:bg-on-surface hover:text-surface"
+              onClick={() => scrollIntoView("welcome")}
+            >
+              <IoHome className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/#about"
+              className="rounded-full p-2 grid place-items-center bg-surface text-on-surface hover:bg-on-surface hover:text-surface"
+              onClick={() => scrollIntoView("about")}
+            >
+              <IoPerson className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/#projects"
+              className="rounded-full p-2 grid place-items-center bg-surface text-on-surface hover:bg-on-surface hover:text-surface"
+              onClick={() => scrollIntoView("projects")}
+            >
+              <IoDocuments className="w-4 h-4" />
+            </Link>
+          </>
+        )}
       </nav>
     </header>
   );
