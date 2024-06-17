@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --primary: 101 56 76;
-  --on-primary: 0 0 12;
-  --surface: 112 11 23;
-  --on-surface: 101 56 76;
-  --background: 0 0 12;
-  --foreground: 0 0 100;
+  --primary: 181 228 160;
+  --on-primary: 31 31 31;
+  --surface: 54 65 52;
+  --on-surface: 181 228 160;
+  --background: 31 31 31;
+  --foreground: 255 255 255;
   --padding-container-base: 1rem;
   --padding-container-md: 2rem;
 }
