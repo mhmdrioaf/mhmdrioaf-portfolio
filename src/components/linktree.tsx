@@ -14,7 +14,7 @@ const LINKS: { name: string; url: string }[] = [
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/mhmdrioaf/",
+    url: "https://www.linkedin.com/in/rioananta",
   },
   {
     name: "X/Twitter",
