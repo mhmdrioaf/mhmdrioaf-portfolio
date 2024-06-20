@@ -1,11 +1,11 @@
 "use client";
 
-import { TFrontmatter } from "@/types/content";
-import React from "react";
 import { extractIdFromSlug } from "@/lib/helper";
-import { twMerge } from "tailwind-merge";
-import Image from "next/image";
+import { TFrontmatter } from "@/types/content";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import React from "react";
+import { twMerge } from "tailwind-merge";
 
 interface IContentListProps {
   contents: TFrontmatter[];
@@ -27,7 +27,7 @@ export default function ContentList({ contents }: IContentListProps) {
   return (
     <section
       id="projects"
-      className="w-full grid grid-cols-1 md:grid-cols-4 gap-4 bg-background text-foreground p-container-base md:p-container-md pb-14 md:pb-0"
+      className="w-full grid grid-cols-1 md:grid-cols-4 gap-4 bg-background text-foreground p-container-base md:p-container-md"
     >
       <div className="order-2 md:order-1 flex flex-col gap-2 col-span-1">
         {contents.map((content) => (
