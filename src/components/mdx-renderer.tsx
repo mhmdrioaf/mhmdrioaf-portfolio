@@ -3,19 +3,25 @@
 import { TContentSource } from "@/types/content";
 import { MDXRemote } from "next-mdx-remote";
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { IoArrowBack, IoOpenOutline } from "react-icons/io5";
 
 const mdxComponents = {
   Image,
 };
 
 export default function MDXRenderer({ ...props }: TContentSource) {
+  const router = useRouter();
   return (
     <div className="w-full md:w-4/5 relative flex flex-col gap-2 items-center justify-center">
       <div className="w-full flex flex-col gap-8 markdown p-container-base md:px-32 md:py-16">
-        <Link className="text-primary underline text-sm" href="/">
-          <span>⬅ Back</span>
-        </Link>
+        <button
+          onClick={() => router.back()}
+          className="text-primary underline text-sm inline-flex gap-1"
+        >
+          <IoArrowBack className="w-4 h-4" />
+          <p>Back</p>
+        </button>
         <div className="w-full flex flex-col gap-2">
           <p className="text-2xl md:text-4xl hyphens-auto md:hyphens-none text-left font-bold">
             {props.frontmatter.title as string}
@@ -36,8 +42,9 @@ export default function MDXRenderer({ ...props }: TContentSource) {
         {props.frontmatter.link && (
           <div className="w-full">
             <a target="_blank" href={props.frontmatter.link}>
-              <button className="w-full rounded-md text-sm text-center p-4 bg-surface/50 text-on-surface hover:bg-surface/100 transition-colors duration-300">
-                View Live Project {"↗"}
+              <button className="w-full rounded-md text-sm text-center justify-center p-4 bg-surface/50 text-on-surface hover:bg-surface/100 transition-colors duration-300 inline-flex items-center gap-1">
+                <p>View Live Project</p>
+                <IoOpenOutline className="w-4 h-4" />
               </button>
             </a>
           </div>
