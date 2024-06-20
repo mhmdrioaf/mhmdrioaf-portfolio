@@ -1,8 +1,9 @@
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import type { Metadata } from "next";
 import { Arvo } from "next/font/google";
-import "./globals.css";
 import { twMerge } from "tailwind-merge";
-import Header from "@/components/header";
+import "./globals.css";
 
 const arvo = Arvo({ weight: ["400", "700"], subsets: ["latin"] });
 
@@ -40,6 +41,7 @@ export default function RootLayout({
         <Header />
         <div className="noise" />
         {children}
+        <Footer />
       </body>
     </html>
   );
