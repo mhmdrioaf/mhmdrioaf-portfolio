@@ -4,7 +4,7 @@ import { IoOpenOutline } from "react-icons/io5";
 
 export default function Footer() {
   return (
-    <footer className="w-full text-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4 px-container-base py-container-base md:px-container-md bg-surface text-on-surface rounded-t-lg pb-14 md:pb-0 mt-4">
+    <footer className="w-full text-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4 px-container-base py-container-base pb-14 md:py-container-base md:pb-container-base md:px-container-md bg-surface text-on-surface rounded-t-lg mt-4">
       <section id="credits">
         <p>
           Built with{" "}
