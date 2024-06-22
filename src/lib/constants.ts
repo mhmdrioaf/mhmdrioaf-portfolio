@@ -43,7 +43,7 @@ At the culmination of the training, I was tasked with completing a Capstone Proj
   },
   SMK_PPDB: {
     title: "SMKs Korporasi Garut",
-    period: "Aug 2024 - Jun 2024",
+    period: "Apr 2024 - Jun 2024",
     description: `Designed and implemented a comprehensive online student enrollment system for SMKs Korporasi Garut. This project involved several key responsibilities and accomplishments:
 - Requirement Analysis: Conducted in-depth discussions with school administrators and staff to gather requirements and understand the specific needs of the enrollment process.
 - System Design: Created detailed system architecture and workflow diagrams to ensure a smooth and efficient enrollment process.
