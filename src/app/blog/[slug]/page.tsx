@@ -46,6 +46,18 @@ export async function generateMetadata({
       contentSource.frontmatter.title as string,
     ],
     creator: "Muhammad Rio Ananta Firdaus",
+    openGraph: {
+      type: 'article',
+      description: contentSource.frontmatter.description,
+      emails: ['dev.rioananta@gmail.com', 'jobs.rioananta@gmail.com'],
+      siteName: "Muhammad Rio Ananta Firdaus Portfolio",
+      locale: "en_US.utf-8",
+      title: contentSource.frontmatter.title,
+      url: "https://mhmdrioaf.vercel.app" + contentSource.frontmatter.slug,
+      images: contentSource.frontmatter.thumbnail,
+      tags: contentSource.frontmatter.tags,
+      authors: "Muhammad Rio Ananta Firdaus",
+    }
   };
 }
 
