@@ -3,7 +3,7 @@ export const SELF_DESCRIPTION =
 export const SOCIAL_MEDIA = {
   GITHUB: "https://github.com/mhmdrioaf",
   LINKEDIN: "https://linkedin.com/in/rioananta",
-  CV: "/CV.pdf",
+  CV: "/CV_MuhammadRioAnantaFirdaus_31052025.pdf",
 };
 export const EDUCATIONS = {
   UNIVERSITY: {
